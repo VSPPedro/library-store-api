@@ -27,6 +27,8 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 # A resource-focused Rails library for developing JSON API compliant servers
 gem 'jsonapi-resources'
+# Rack middleware for blocking & throttling 
+gem 'rack-attack'
 
 group :development, :test do
   # Provides Rails integration for factory_bot
@@ -53,6 +55,8 @@ group :test do
   gem 'jsonapi-resources-matchers'
   # Simple one-liner tests for common Rails functionality
   gem 'shoulda-matchers'
+  # Rack::Test is a layer on top of Rack's MockRequest similar to Merb's RequestHelper 
+  gem 'rack-test'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
