@@ -1,8 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe Author, type: :model do
-  it "should have a valid factory" do
-    expect(build(:author)).to be_valid
+  it_behaves_like "a valid factory for", :author
+
+  context "Associations" do
+    it { is_expected.to have_many(:books) }
   end
 
   context "Validations" do

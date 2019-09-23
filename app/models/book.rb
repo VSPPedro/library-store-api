@@ -1,6 +1,6 @@
-class Author < ApplicationRecord
+class Book < ApplicationRecord
   # == ASSOCIATIONS =========================================================
-  has_many :books
+  belongs_to :author
   # == VALIDATIONS ==========================================================
-  validates :name, presence: true
+  validates :title, :isbn, :price, presence: true 
 end
