@@ -5,6 +5,12 @@ RSpec.describe Api::V1::AuthorResource, type: :resource do
   subject { described_class.new(author, {}) }
 
   it { is_expected.to have_primary_key(:id) }
-  it { is_expected.to have_attribute(:name) }
-  it { is_expected.to have_many(:books) }
+
+  context "Attributes" do
+    it { is_expected.to have_attribute(:name) }
+  end
+
+  context "Associations" do
+    it { is_expected.to have_many(:books) }
+  end
 end
