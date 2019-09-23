@@ -41,12 +41,12 @@ Access the endpoint books using: localhost:3000/api/v1/books
 Request
 ```
 { 
-	"data": {
-		"type": "authors",
-		"attributes": { 
-			"name": "Patrick Rothfuss"
-		}
-	}
+  "data": {
+    "type": "authors",
+    "attributes": { 
+      "name": "Patrick Rothfuss"
+    }
+  }
 }
 ```
 
@@ -85,20 +85,20 @@ In the example below we are using Patrick Rothfuss id in the relationship author
 Request
 ```
 { 
-	"data": {
-		"type": "books",
-		"attributes": { 
-			"title": "The Name of The Wind",
-			"isbn": "9780345805362",
-			"price": "35.99",
-			"short-description": "The Name of the Wind, also called The Kingkiller Chronicle: Day One, is a heroic fantasy novel written by American author Patrick Rothfuss."
-		},  
-		"relationships": {  
-			"author": {  
+  "data": {
+    "type": "books",
+    "attributes": { 
+      "title": "The Name of The Wind",
+      "isbn": "9780345805362",
+      "price": "35.99",
+      "short-description": "The Name of the Wind, also called The Kingkiller Chronicle: Day One, is a heroic fantasy novel written by American author Patrick Rothfuss."
+    },
+    "relationships": {  
+      "author": {  
         "data": { "type": "authors", "id": "1" }
       }
-		}
-	}
+    }
+  }
 }
 ```
 
